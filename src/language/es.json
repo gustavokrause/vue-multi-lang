@@ -1,0 +1,6 @@
+{
+    "message": {
+      "hello": "hola mundo",
+      "text-users": "Ningún usuario registrado | 1 usuario registrado | {count} usuarios registrados"
+    }
+}

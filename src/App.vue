@@ -1,17 +1,24 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <LanguageSwitcher />
+    <h1>{{$t('message.hello')}}</h1>
+    <p>{{ $tc('message.text-users', users.length, { count: users.length }) }}</p>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LanguageSwitcher from './components/LanguageSwitcher.vue'
 
 export default {
   name: 'app',
+  data() {
+    return {
+      users: ["Gustavo", "Pedro", "João", "Carlos"]
+    }
+  },
   components: {
-    HelloWorld
+    LanguageSwitcher
   }
 }
 </script>
